@@ -29,7 +29,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 0px;
   margin-top: 0;
   
 }
@@ -104,7 +104,7 @@ ul {
 
 .box {
   width: 33.33%;
-  height: 300px;
+  height: relative;
   text-align: left;
   text-align: center;
   margin: 10px;
@@ -115,6 +115,7 @@ ul {
 
 .box img {
   width: 100%;
+  margin-bottom:10px;
 }
 
 .box h3,
@@ -125,13 +126,14 @@ ul {
 
 .center-heading {
   text-align: center;
+  margin-top:0px;
 }
 
 
 /* Header styles */
 header {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   overflow: hidden;
 }
@@ -140,6 +142,7 @@ header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  padding:20px;
 }
 .nav-links {
   display: flex;
@@ -147,7 +150,7 @@ header img {
 }
 
 .nav-links li {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .nav-links a {
@@ -224,70 +227,6 @@ nav ul li a:hover:before {
   box-shadow: 0 0 5px 5px #0d1730;
 }
 
-/* Carousel styles */
-.carousel {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  margin-top: 20px;
-}
-
-.carousel-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-item.active {
-  opacity: 1;
-}
-
-.carousel-item img {
-  width: 80%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 2rem;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.carousel-control:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.carousel-control.prev {
-  left: 1rem;
-}
-
-.carousel-control.next {
-  right: 1rem;
-}
-
-
 
 /* footer styles */
 footer {
@@ -326,6 +265,7 @@ footer {
 .footer-links ul li,
 .footer-social ul li {
   list-style: none;
+  margin-bottom:5px;
 }
 
 .footer-links ul li a,
@@ -357,7 +297,7 @@ footer {
 
 /* News styles */
 .news-box {
-  max-width: 800px;
+  max-width: 1200px;
   height: 200px;
   overflow: hidden;
   border: 1px solid #ccc;
@@ -375,7 +315,7 @@ footer {
   background-color: #f5f5f5;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom:10px;
@@ -386,7 +326,7 @@ footer {
   background-color: #f5f5f5;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   margin-top: 0;
   margin-bottom:20px;
@@ -416,87 +356,9 @@ footer {
   }
 }
 
-.table {
-  display: flex;
-  flex-direction: column;
-}
 
-.row {
-  display: flex;
-  flex: 1;
-  align-items: center;
-}
-
-.cell {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 5px;
-}
-
-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  position: relative;
-  overflow: hidden;
-  margin-top:10px;
-}
-
-button:before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background-color: rgba(255, 255, 255, 0.3);
-  transform: translate(-50%, -50%) rotate(45deg);
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s;
-  animation: neon-pulse 2s infinite;
-}
-
-button:hover:before {
-  opacity: 1;
-}
-
-@keyframes neon-pulse {
-  0% {
-    opacity: 0;
-    box-shadow: 0 0 5px #fff;
-  }
-  50% {
-    opacity: 1;
-    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
-  }
-  100% {
-    opacity: 0;
-    box-shadow: 0 0 5px #fff;
-  }
-}
-
-
-button:hover {
-  animation: neon 1.5s infinite;
-}
 /* our team */
 .team-heading {
-  clear: both;
   text-align: center;
   margin-bottom: 0px;
   margin-top:40px;
@@ -513,7 +375,6 @@ button:hover {
   font-weight: 700;
   color: #4285F4;
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 .team-section {
@@ -556,3 +417,6 @@ button:hover {
 
 /* Adjust the CSS as per your requirements */
 
+.carousel{
+	margin-top:20px;
+}
